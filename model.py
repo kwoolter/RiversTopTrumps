@@ -1,5 +1,6 @@
 import csv
 import logging
+from jinja2 import Template
 
 class Food():
     def __init__(self, name : str, category : str):
@@ -14,6 +15,17 @@ class Food():
     def add_attribute(self, attribute_name : str, attribute_value):
         new_value = is_numeric(attribute_value)
         self.attributes[attribute_name] = new_value
+
+    def get_attribute(self, attribute_name : str):
+        if attribute_name not in self.attributes.keys():
+            raise Exception("Attribute {} not set for {}".format(attribute_name, self.name))
+
+        value = self.attributes[attribute_name]
+
+        if value is None:
+            value = 0
+
+        return "{:0.2f}".format(value)
 
     def print_card(self):
         print("{0} ({1})".format(self.name, self.category))
@@ -56,7 +68,7 @@ class FoodFactory():
                     self.items[item_name] = new_item
 
                 # loop through all of the header fields except the first 2 columns...
-                for i in range(3, len(header)):
+                for i in range(2, len(header)):
 
                     attribute_name = header[i]
                     attribute_value = row.get(attribute_name)
@@ -70,6 +82,16 @@ class FoodFactory():
         for item in self.items.values():
             #print(str(item))
             item.print_card()
+
+        self.print_html()
+
+
+    def print_html(self):
+
+        template = Template('<tr><td>{{ attribute }}:</td>{{ category }}<td></tr>')
+        for item in self.items.values():
+            html = template.render(attribute=item.name, category=item.category)
+            print(str(html))
 
 
 
