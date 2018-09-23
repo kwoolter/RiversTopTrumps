@@ -1,4 +1,51 @@
-table, th, td {
-    border: 1px solid black;
-    width: 5cm;
+
+
+th, td {
+    font-family: verdana;
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 1px;
+    padding-left: 4px;
+    margin: 0px
+    border-spacing: 0px;
+}
+
+#card table {
+    border: 1px solid grey;
+    font-family: verdana;
+    width: 7cm;
+    background-color: white;
+    color: white;
+    padding: 3px;
+}
+
+#card tr, td {
+    border: none;
+    }
+
+#top th {
+    background-color: white;
+    color: black;
+    padding: 3px
+}
+
+#top_row td, tr {
+    background-color: rgb(105,207,245);
+    color: white;
+}
+
+#top td {
+    background-color: rgb(199, 235, 251);
+    color: black;
+}
+
+#middle td {
+    background-color: rgb(126, 193, 64);
+    color: white;
+}
+
+#bottom td {
+    background-color: rgb(236, 26, 35);
+    color: white;
 }
