@@ -1,51 +1,85 @@
 
-
-th, td {
-    font-family: verdana;
-    border: none;
-    background-color: white;
-    color: black;
-    padding: 1px;
-    padding-left: 4px;
-    margin: 0px
-    border-spacing: 0px;
-}
-
-#card table {
+#card {
     border: 1px solid grey;
+    border-collapse: collapse;
     font-family: verdana;
     width: 7cm;
     background-color: white;
-    color: white;
-    padding: 3px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
 }
 
-#card tr, td {
-    border: none;
-    }
-
-#top th {
+#card th {
     background-color: white;
     color: black;
-    padding: 3px
+    border: none;
+    margin: 0px;
+    padding: 3px;
+    }
+
+#card tr {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    }
+
+#card td {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    }
+
+#top {
+    border-collapse: separate;
+    width:100%;
 }
 
-#top_row td, tr {
+#top th {
+    color:white;
+    background-color: rgb(105,207,245);
+    padding: 3px;
+    text-align: left;
+    font-style: normal;
+}
+
+#top_row tr {
     background-color: rgb(105,207,245);
     color: white;
+    padding: 2px;
 }
+
+#top_row td {
+    background-color: rgb(105,207,245);
+    color: white;
+    padding: 2px;
+}
+
 
 #top td {
     background-color: rgb(199, 235, 251);
     color: black;
+    padding: 2px;
+}
+
+#middle {
+    border-collapse: separate;
+    width:100%;
 }
 
 #middle td {
     background-color: rgb(126, 193, 64);
     color: white;
+    padding: 2px;
+}
+
+#bottom {
+    border-collapse: separate;
+    width:100%;
 }
 
 #bottom td {
     background-color: rgb(236, 26, 35);
     color: white;
+    padding: 2px;
 }
