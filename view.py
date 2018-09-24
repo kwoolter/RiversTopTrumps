@@ -10,7 +10,7 @@ class FoodHTMLView():
         templateLoader = FileSystemLoader(searchpath="./view")
         self.env = Environment(loader=templateLoader)
 
-        self.template = self.env.get_template('card_template.html')
+        self.template = self.env.get_template('card_template_new.html')
 
 
     def render(self, food : model.Food):
@@ -32,3 +32,4 @@ class FoodHTMLView():
         print(str(html))
         html = ""
         return(html)
+

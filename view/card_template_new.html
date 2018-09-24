@@ -1,68 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Food Card Template</title>
-    <link rel="stylesheet" href="template.css">
-</head>
-<body>
 <br>
 <table class="card" style="width:7cm;">
     <tbody>
     <!-- Top row - header of the card -->
     <tr class="card_header">
-        <th style="width:25%;"></th>
-        <th style="width:50%;">Food Name</th>
-        <th style="font-size:11px;width:25%;vertical-align:bottom;">per 100g</th>
+        <th style="width:20%;"></th>
+        <th style="height=30px;width:50%;">{{ item_name }} ({{ item_category}})</th>
+        <th style="font-size:11px;width:30%;vertical-align:bottom;">per 100g</th>
     </tr>
-    <!-- First stats section -->
+    <!-- First section -->
     <tr class="top_h">
         <td rowspan="4" style="background-color:white;"></td>
         <td>ENERGY</td>
-        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">{{ energy }}</td>
     </tr>
     <tr class="top">
         <td>PROTEIN</td>
-        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">{{ protein }}</td>
     </tr>
     <tr class="top">
         <td>CARBOHYDRATE</td>
-        <td style="text-align:center;">3</td>
+        <td style="text-align:center;">{{ carbohydrate }}</td>
     </tr>
     <tr class="top">
         <td>FAT total</td>
-        <td style="text-align:center;">4</td>
+        <td style="text-align:center;">{{ fat_total }}</td>
     </tr>
-    <!-- Second stats section -->
+    <!-- Second section -->
     <tr class="middle">
         <td rowspan="3" style="text-align:center;">HIGH WINS</td>
         <td>FIBRE</td>
-        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">{{ fibre }}</td>
     </tr>
     <tr class="middle">
         <td>CALCIUM</td>
-        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">{{ calcium }}</td>
     </tr>
     <tr class="middle">
         <td>IRON</td>
-        <td style="text-align:center;">3</td>
+        <td style="text-align:center;">{{ iron }}</td>
     </tr>
-    <!-- Third stats section -->
+    <!-- Third section -->
     <tr class="bottom">
         <td rowspan="3" style="text-align:center;">LOW WINS</td>
         <td>FAT saturated</td>
-        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">{{ fat_saturated }}</td>
     </tr>
     <tr class="bottom">
         <td>SUGAR</td>
-        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">{{ sugar }}</td>
     </tr>
     <tr class="bottom">
         <td>SALT</td>
-        <td style="text-align:center;">3</td>
+        <td style="text-align:center;">{{ salt }}</td>
     </tr>
     </tbody>
 </table>
 <br>
-</body>
-</html>

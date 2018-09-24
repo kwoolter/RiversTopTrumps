@@ -23,9 +23,15 @@ class Food():
         value = self.attributes[attribute_name]
 
         if value is None:
-            value = 0
+            value_str = "0"
+        elif value < 5:
+            value_str = "{:0.2f}".format(value)
+        elif value < 10:
+            value_str = "{:0.1f}".format(value)
+        else:
+            value_str = "{:0.0f}".format(value)
 
-        return "{:0.2f}".format(value)
+        return value_str
 
     def print_card(self):
         print("{0} ({1})".format(self.name, self.category))
