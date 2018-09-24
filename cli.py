@@ -17,7 +17,7 @@ class FoodCLI(cmd.Cmd):
         self.view = None
 
     def do_start(self, args):
-        """Load all of the fixtures and predictions"""
+        """Load all of the foods"""
         try:
             self.model = model.FoodFactory()
             self.model.load()
@@ -30,11 +30,14 @@ class FoodCLI(cmd.Cmd):
         """Print all of the loaded details"""
         try:
             self.model.print()
+        except Exception as err:
+            print(str(err))
 
+    def do_render(self, args):
+        """Render all of the loaded details"""
+        try:
             for item in self.model.items.values():
                 print(self.view.render(item))
-
-
         except Exception as err:
             print(str(err))
 

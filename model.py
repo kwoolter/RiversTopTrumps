@@ -1,6 +1,5 @@
 import csv
 import logging
-from jinja2 import Template
 
 class Food():
     def __init__(self, name : str, category : str):
@@ -24,8 +23,6 @@ class Food():
 
         if value is None:
             value_str = "0"
-        elif value < 5:
-            value_str = "{:0.2f}".format(value)
         elif value < 10:
             value_str = "{:0.1f}".format(value)
         else:
@@ -38,12 +35,11 @@ class Food():
         attributes = sorted(list(self.attributes.keys()))
         for attribute in attributes:
             attribute_value = self.attributes[attribute]
-            #print("\t{0}: {1}".format(attribute, attribute_value))
+
             if attribute_value is not None:
                 print("\t{0}: {1:.2f}".format(attribute, attribute_value))
             else:
                 print("\t{0}: NONE".format(attribute))
-
 
 
 class FoodFactory():
@@ -88,18 +84,6 @@ class FoodFactory():
         for item in self.items.values():
             #print(str(item))
             item.print_card()
-
-        self.print_html()
-
-
-    def print_html(self):
-
-        template = Template('<tr><td>{{ attribute }}:</td>{{ category }}<td></tr>')
-        for item in self.items.values():
-            html = template.render(attribute=item.name, category=item.category)
-            print(str(html))
-
-
 
 
 def pick(object_type: str, objects: list, auto_pick: bool = False):
