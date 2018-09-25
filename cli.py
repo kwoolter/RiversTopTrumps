@@ -36,7 +36,9 @@ class FoodCLI(cmd.Cmd):
     def do_render(self, args):
         """Render all of the loaded details"""
         try:
-            for item in self.model.items.values():
+            items = sorted(list(self.model.items.keys()))
+            for item_name in items:
+                item = self.model.items[item_name]
                 print(self.view.render(item))
         except Exception as err:
             print(str(err))
