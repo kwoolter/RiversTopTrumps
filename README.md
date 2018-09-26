@@ -4,4 +4,4 @@
 
 # Results
 
-<img src="https://github.com/kwoolter/Nimrod/blob/master/screenshots/Capture12.PNG" alt="game4">
+<img src="https://raw.githubusercontent.com/kwoolter/FoodTopTrumps/master/view/Capture.PNG" alt="cards1">
