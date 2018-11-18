@@ -12,7 +12,7 @@ class FoodHTMLView():
         self.env = Environment(loader=templateLoader)
         self.template = self.env.get_template("card_template_new.html")
 
-    def render(self, food : model.Food):
+    def render(self, food : model.River):
 
         html = self.template.render(item_name = food.name,
                                     energy = food.get_attribute("Energy"),

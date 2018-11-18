@@ -1,7 +1,7 @@
 import cli
 
 def main():
-    print("Food Top Trumps")
+    print("River Top Trumps")
     c = cli.FoodCLI()
     c.cmdloop()
 

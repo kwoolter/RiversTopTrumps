@@ -1,4 +1,4 @@
-# Food Top Trumps
+# Rivers Top Trumps
 :copyright: :monkey: kwoolter 2018
 
 

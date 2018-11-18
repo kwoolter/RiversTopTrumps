@@ -6,7 +6,7 @@ import view
 
 class FoodCLI(cmd.Cmd):
 
-    intro = "Welcome to the Food Top Trumps.\nType 'start' to get going!\nType 'help' for a list of commands."
+    intro = "Welcome to the River Top Trumps.\nType 'start' to get going!\nType 'help' for a list of commands."
     prompt = "What next?"
 
     def __init__(self):
@@ -19,7 +19,7 @@ class FoodCLI(cmd.Cmd):
     def do_start(self, args):
         """Load all of the foods"""
         try:
-            self.model = model.FoodFactory()
+            self.model = model.RiverFactory()
             self.model.load()
             self.view = view.FoodHTMLView()
             self.view.initialise()

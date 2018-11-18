@@ -1,7 +1,7 @@
 import csv
 import logging
 
-class Food():
+class River():
     def __init__(self, name : str, category : str):
         self.name = name
         self.category = category
@@ -42,7 +42,7 @@ class Food():
                 print("\t{0}: NONE".format(attribute))
 
 
-class FoodFactory():
+class RiverFactory():
     def __init__(self):
         self.items = {}
 
@@ -64,7 +64,7 @@ class FoodFactory():
 
                 item_name = row.get("Item")
                 item_category = row.get("Category")
-                new_item = Food(item_name, item_category)
+                new_item = River(item_name, item_category)
 
                 if item_name not in self.items.keys():
                     self.items[item_name] = new_item
