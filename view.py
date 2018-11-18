@@ -1,7 +1,7 @@
 from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
 import model
 
-class FoodHTMLView():
+class RiverHTMLView():
 
     def __init__(self):
         self.env = None

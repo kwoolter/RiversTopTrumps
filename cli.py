@@ -4,24 +4,24 @@ import cmd
 import model
 import view
 
-class FoodCLI(cmd.Cmd):
+class RiverCLI(cmd.Cmd):
 
     intro = "Welcome to the River Top Trumps.\nType 'start' to get going!\nType 'help' for a list of commands."
     prompt = "What next?"
 
     def __init__(self):
 
-        super(FoodCLI, self).__init__()
+        super(RiverCLI, self).__init__()
 
         self.model = None
         self.view = None
 
     def do_start(self, args):
-        """Load all of the foods"""
+        """Load all of the rivers"""
         try:
             self.model = model.RiverFactory()
             self.model.load()
-            self.view = view.FoodHTMLView()
+            self.view = view.RiverHTMLView()
             self.view.initialise()
         except Exception as err:
             print(str(err))

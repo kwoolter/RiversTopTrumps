@@ -2,13 +2,12 @@ import csv
 import logging
 
 class River():
-    def __init__(self, name : str, category : str):
+    def __init__(self, name : str):
         self.name = name
-        self.category = category
         self.attributes = {}
 
     def __str__(self):
-        s = "{0} ({1}): {2} attributes".format(self.name, self.category, len(self.attributes))
+        s = "{0} ({1}): {2} attributes".format(self.name, len(self.attributes))
         return s
 
     def add_attribute(self, attribute_name : str, attribute_value):
@@ -31,7 +30,7 @@ class River():
         return value_str
 
     def print_card(self):
-        print("{0} ({1})".format(self.name, self.category))
+        print("{0}".format(self.name))
         attributes = sorted(list(self.attributes.keys()))
         for attribute in attributes:
             attribute_value = self.attributes[attribute]
@@ -48,10 +47,10 @@ class RiverFactory():
 
 
     def load(self):
-        print("\nLoading foods...")
+        print("\nLoading rivers...")
 
         # Attempt to open the file
-        with open(".\\data\\foods.csv", 'r') as object_file:
+        with open(".\\data\\rivers.csv", 'r') as object_file:
 
             # Load all rows in as a dictionary
             reader = csv.DictReader(object_file)
@@ -62,9 +61,9 @@ class RiverFactory():
             # For each row in the file....
             for row in reader:
 
-                item_name = row.get("Item")
-                item_category = row.get("Category")
-                new_item = River(item_name, item_category)
+                item_name = row.get("Name")
+                item_category = row.get("Outflow")
+                new_item = River(item_name)
 
                 if item_name not in self.items.keys():
                     self.items[item_name] = new_item

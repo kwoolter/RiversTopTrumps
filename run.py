@@ -2,7 +2,7 @@ import cli
 
 def main():
     print("River Top Trumps")
-    c = cli.FoodCLI()
+    c = cli.RiverCLI()
     c.cmdloop()
 
     exit(0)
