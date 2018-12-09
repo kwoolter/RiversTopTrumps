@@ -4,4 +4,4 @@
 
 # Results
 
-<img src="https://raw.githubusercontent.com/kwoolter/FoodTopTrumps/master/view/Capture.PNG" alt="cards1">
+<img src="https://raw.githubusercontent.com/kwoolter/RiversTopTrumps/master/view/Capture1.PNG" alt="cards1">
