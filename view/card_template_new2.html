@@ -3,36 +3,37 @@
     <tbody>
     <!-- Top row - header of the card -->
     <tr class="card_header">
-        <th style="width:25%;"></th>
-        <th style="width:50%;">{{ name }}</th>
-        <th style="font-size:11px;font-weight: normal;width:25%;vertical-align:bottom;"></th>
+        <th colspan="3">{{ name }}</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <img src="{{ image }}" border=0 height=100 width=300>
+        </td>
     </tr>
     <!-- First stats section -->
-    <tr class="top_h">
-        <td rowspan="4" style="background-color:white;"></td>
+    <tr class="top">
         <td>Continent</td>
-        <td style="text-align:center;">{{ continent }}</td>
+        <td colspan="2" style="text-align:center;">{{ continent }}</td>
     </tr>
     <tr class="top">
         <td>Outflow</td>
-        <td style="text-align:center;">{{ outflow }}</td>
+        <td colspan="2" style="text-align:center;">{{ outflow }}</td>
     </tr>
     <!-- Second stats section -->
     <tr class="middle">
-        <td rowspan="3" class="middle_left">HIGH WINS</td>
-        <td>Length (km)</td>
+        <td colspan="2" style="width:75%;">Length (km)</td>
         <td style="text-align:center;">{{ length }}</td>
     </tr>
     <tr class="middle">
-        <td>Drainage Area (km2)</td>
+        <td colspan="2">Drainage Area (km<sup>2</sup>)</td>
         <td style="text-align:center;">{{ drainage_area }}</td>
     </tr>
     <tr class="middle">
-        <td>Average Discharge (m3/sec)</td>
+        <td colspan="2">Average Discharge (m<sup>3</sup>/sec)</td>
         <td style="text-align:center;">{{ average_discharge }}</td>
     </tr>
     <tr class="middle">
-        <td>Countries</td>
+        <td colspan="2">Countries</td>
         <td style="text-align:center;">{{ country_count }}</td>
     </tr>
     </tbody>

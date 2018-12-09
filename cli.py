@@ -1,5 +1,3 @@
-import cli
-
 import cmd
 import model
 import view

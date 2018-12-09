@@ -2,12 +2,15 @@ import csv
 import logging
 
 class River():
-    def __init__(self, name : str):
+    def __init__(self, name : str, continent : str, outflow : str = None, image_url : str = None):
         self.name = name
+        self.continent = continent
+        self.outflow = outflow
+        self.image_url = image_url
         self.attributes = {}
 
     def __str__(self):
-        s = "{0} ({1}): {2} attributes".format(self.name, len(self.attributes))
+        s = "{0} ({1}): {2} attributes".format(self.name, self.continent, len(self.attributes))
         return s
 
     def add_attribute(self, attribute_name : str, attribute_value):
@@ -20,23 +23,16 @@ class River():
 
         value = self.attributes[attribute_name]
 
-        if value is None:
-            value_str = "0"
-        elif value < 10:
-            value_str = "{:0.1f}".format(value)
-        else:
-            value_str = "{:0.0f}".format(value)
-
-        return value_str
+        return value
 
     def print_card(self):
-        print("{0}".format(self.name))
+        print("{0} ({1}).  Outflow: {2} Image: {3}".format(self.name, self.continent, self.outflow, self.image_url))
         attributes = sorted(list(self.attributes.keys()))
         for attribute in attributes:
             attribute_value = self.attributes[attribute]
 
             if attribute_value is not None:
-                print("\t{0}: {1:.2f}".format(attribute, attribute_value))
+                print("\t{0}: {1}".format(attribute, attribute_value))
             else:
                 print("\t{0}: NONE".format(attribute))
 
@@ -62,18 +58,20 @@ class RiverFactory():
             for row in reader:
 
                 item_name = row.get("Name")
+                item_image_url = row.get("URL")
+                item_continent = row.get("Continent")
                 item_category = row.get("Outflow")
-                new_item = River(item_name)
+                new_item = River(item_name, item_continent, item_category, item_image_url)
 
                 if item_name not in self.items.keys():
                     self.items[item_name] = new_item
 
-                # loop through all of the header fields except the first 2 columns...
-                for i in range(2, len(header)):
+                # loop through all of the header fields except the first 3 columns...
+                for i in range(4, len(header)):
 
                     attribute_name = header[i]
                     attribute_value = row.get(attribute_name)
-                    new_item.add_attribute(attribute_name, attribute_value)
+                    new_item.add_attribute(attribute_name, int(attribute_value))
 
 
             # Close the file

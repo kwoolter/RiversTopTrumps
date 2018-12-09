@@ -1,28 +1,23 @@
-Name,Length,Drainage area,Average discharge,Countries,Outflow
-Aldan,2273,729000,5060,1,Paraná
-Amazon–Ucayali–Tambo–Ene–Mantaro[n 1],6992,7050000,209000,7,Mamoré
-Amu Darya–Panj,2620,534739,1400,4,Orinoco
-Amur–Argun–Kherlen,4444,1855000,11400,3,Yangtze
-Araguaia,2627,358125,5510,1,Amazon
-Arkansas,2348,505000,1066,1,Paraná
-Ayeyarwady,2170,411000,13000,2,Lake Balkhash
-Belaya,1420,142000,858,1,East Siberian Sea
-Beni,1599,283350,8900,1,Arabian Sea
-Benue,1400,0,0,2,Xingu
-Blue Nile,1600,326400,0,2,Irtysh
-Brahmaputra–Tsangpo,3848,712035,"19,800[9][10]",6,Amazon
-Brazos,1352,0,0,1,Indian Ocean
-Chulym,1799,134000,0,1,Amazon
-Churchill,1600,0,0,1,Volga
-Colorado (Texas),1438,0,0,1,Congo
-Colorado (western U.S.),2333,390000,1200,2,Laptev Sea
-Columbia,"2,250 (1,953)",415211,7500,2,East Siberian Sea
-Congo–Chambeshi,4700,3680000,41800,9,Bay of Bengal
-Cooper–Barcoo,1420,0,0,1,Caspian Sea
-"Danube–Breg (Donau, Dun?re, Duna, Dunav, Dunaj)","2,888*",817000,7130,9,Murrumbidgee River
-Dnieper,2287,516300,1670,3,Laptev Sea
-Dniester,"1,411 (1,352)",72100,310,2,Bohai Sea
-Don,1870,425600,935,2,Indian Ocean
-Fraser,1368,220000,3475,1,Congo
-Ganges–Hooghly–Padma (Ganga),"2,620[13]",907000,"12,037[14]",4,Yenisei
-Godavari,1465,312812,3061,1,Beaufort Sea
+Name,URL,Continent,Outflow,Length (km),Drainage area,Average discharge,Country Count
+Amazon,http://www.chimuadventures.com/blog/wp-content/uploads/2016/07/The-Amazon-River-as-it-snakes-its-way-through-the-Amazon-Rainforest.jpg,South America,Atlantic Ocean,6992,7050000,209000,7
+Blue Nile,https://afrotourism.com/wp-content/uploads/2014/11/bluenileriver2.jpg,Africa,Nile,1600,326400,0,2
+Colorado,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Horseshoe_Bend_TC_27-09-2012_15-34-14.jpg/1280px-Horseshoe_Bend_TC_27-09-2012_15-34-14.jpg,North America,Gulf of California,2333,390000,1200,2
+Congo,"https://media.cntraveler.com/photos/56096de94dd0937b3c7f3efd/4:3/w_480,c_limit/congo-river-cr-getty.jpg",Africa,Atlantic Ocean,4700,3680000,41800,9
+Danube,https://cdn.britannica.com/s:500x350/54/6954-004-6CD15872.jpg,Europe,Black Sea,2888,817000,7130,9
+Don,https://2.bp.blogspot.com/-wdW5t3CUAnw/UKpJ291agiI/AAAAAAAAcE0/vJLPYp_vv_M/s1600/russia11.jpg,Europe,Sea of Azov,1870,425600,935,2
+Fraser,https://d3d0lqu00lnqvz.cloudfront.net/media/media/f7d480be-53a4-4ce7-9dd8-a08f40df9f31.jpg,North America,Pacific Ocean,1368,220000,3475,1
+Ganges,https://www.visittnt.com/images/varanasi/ganges-river-varanasi.jpg,Asia,Bay of Bengal,2620,907000,12037,4
+Mackenzie,https://i.pinimg.com/originals/66/ce/2b/66ce2b24b332b75b591f70feabc46ff8.jpg,North America,Beaufort Sea,4241,1790000,10300,1
+Mekong,https://www.vikingrivercruises.com/images/DAY_SA-Mekong_d11_TanChauAndVinhHoa-Boatmen_478x345_tcm21-9816.jpg,Asia,South China Sea,4350,810000,16000,6
+Mississippi,https://www.4rivers.com/mississippi/i/m-info-4-900x506.jpg,North America,Gulf of Mexico,6275,2980000,16200,2
+Murray,https://www.abc.net.au/news/image/8815684-3x2-700x467.jpg,Australia,Southern Ocean,3672,1061000,767,1
+Niger,https://www.ghanagrio.com/articles/wp-content/uploads/2011/11/Niger-River.jpg,Africa,Gulf of Guinea,4200,2090000,9570,10
+Orinoco,https://bigboyorinocoriveradventures.weebly.com/uploads/4/6/3/8/46386335/6893116.jpg?341,South America,Atlantic Ocean,2101,1380000,33000,3
+Pearl,https://www.webuildvalue.com/static/upload/pea/pearl-river-delta-china.jpg,Asia,South China Sea,2200,437000,13600,2
+Rio Grande,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm4qNVbZzSutfIiFlv0tK-dtr1C5xhDyRc7taU_XzNQRYz2SCfKw,North America,Gulf of Mexico,3057,570000,82,2
+Volga,https://media.istockphoto.com/photos/the-uglich-kremlin-aerial-view-picture-id695048582?k=6&m=695048582&s=612x612&w=0&h=zEVh5cVEaCzfX94xOTd0ulXd6iTqCVhOwhtgtWU-d-4=,Europe,Caspian Sea,3645,1380000,8080,1
+White Nile,https://photos.smugmug.com/Travel/South-Sudan/Bor-Mabior-Juba-flight/i-pb5M52t/1/6b6a45f3/L/globetrotterphoto-3-L.jpg,Africa,Mediterranean,6853,3254555,2800,11
+Yangtze,https://www.chinatour.com/wp-content/uploads/2012/04/first-bend-of-yangtze-river-1024x512.jpg,Asia,East China Sea,6300,1800000,31900,1
+Yellow River,http://www.infyworld.com/wp-content/uploads/2017/02/23b3797696e7efa53bb8ee17b8712dcd-650x334.jpg,Asia,Bohai Sea,5464,745000,2110,1
+Yukon,http://justfunfacts.com/wp-content/uploads/2017/08/yukon-river.jpg,North America,Bering Sea,3185,850000,6210,2
+Zambezi,https://savannabel.com/wp-content/uploads/2014/08/victoria-falls-savannabel-aug-2014.jpg,Africa,Mozambique Channel,2693,1330000,4880,8

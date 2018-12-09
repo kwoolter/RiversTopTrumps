@@ -10,21 +10,25 @@ class RiverHTMLView():
     def initialise(self):
         templateLoader = FileSystemLoader(searchpath="./view")
         self.env = Environment(loader=templateLoader)
-        self.template = self.env.get_template("card_template_new.html")
+        self.template = self.env.get_template("card_template_new2.html")
 
-    def render(self, food : model.River):
+    def render(self, river : model.River):
 
-        html = self.template.render(item_name = food.name,
-                                    energy = food.get_attribute("Energy"),
-                                    protein = food.get_attribute("Protein"),
-                                    carbohydrate = food.get_attribute("Carbohydrate"),
-                                    fat_total = food.get_attribute("Total Fat"),
-                                    fibre=food.get_attribute("Total Dietary Fibre"),
-                                    calcium=food.get_attribute("Calcium"),
-                                    iron=food.get_attribute("Iron"),
-                                    fat_saturated=food.get_attribute("Fat saturated"),
-                                    sugar=food.get_attribute("Total Sugar"),
-                                    salt=food.get_attribute("Sodium")
+
+        length = "{:,}".format(int(river.get_attribute("Length (km)")))
+        drainage_area = "{:,}".format(int(river.get_attribute("Drainage area")))
+        country_count = "{:,}".format(river.get_attribute("Country Count"))
+        average_discharge = "{:,}".format(int(river.get_attribute("Average discharge")))
+
+
+        html = self.template.render(name = river.name,
+                                    continent= river.continent,
+                                    outflow = river.outflow,
+                                    image = river.image_url,
+                                    length = length,
+                                    country_count = country_count,
+                                    drainage_area = drainage_area,
+                                    average_discharge = average_discharge
                                     )
 
         return(html)

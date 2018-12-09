@@ -10,12 +10,12 @@
     margin: 1px;
 }
 
-/* The header with the Food name */
+/* The header with the River name */
 .card_header th {
-    background-color: white;
-    color: black;
+    background-color: rgb(24, 75, 169);
+    color: white;
     font-family: verdana;
-    font-size: 14px;
+    font-size: 20px;
     border: none;
     margin: 0px;
     padding: 1px;
@@ -23,18 +23,13 @@
     vertical-align:center;
 }
 
-/* special header for the Energy row */
-.top_h td {
-    background-color: rgb(105,207,245);
-    color: rgb(250,250,250);
-    padding: 2px;
-}
 
 /* top stats section */
 .top td {
     background-color: rgb(199, 235, 251);
     color: black;
     padding: 2px;
+    width: 33%;
 }
 
 /* middle stats section */
