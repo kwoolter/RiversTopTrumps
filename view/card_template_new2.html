@@ -7,7 +7,7 @@
     </tr>
     <tr>
         <td colspan="3">
-            <img src="{{ image }}" border=0 height=100 width=300>
+            <img src="{{ image }}" border=0 height=140 width=300>
         </td>
     </tr>
     <!-- First stats section -->
@@ -16,7 +16,7 @@
         <td colspan="2" style="text-align:center;">{{ continent }}</td>
     </tr>
     <tr class="top">
-        <td>Outflow</td>
+        <td>Mouth</td>
         <td colspan="2" style="text-align:center;">{{ outflow }}</td>
     </tr>
     <!-- Second stats section -->
@@ -25,16 +25,16 @@
         <td style="text-align:center;">{{ length }}</td>
     </tr>
     <tr class="middle">
-        <td colspan="2">Drainage Area (km<sup>2</sup>)</td>
-        <td style="text-align:center;">{{ drainage_area }}</td>
-    </tr>
-    <tr class="middle">
-        <td colspan="2">Average Discharge (m<sup>3</sup>/sec)</td>
+        <td colspan="2">Average Flow (m<sup>3</sup>/sec)</td>
         <td style="text-align:center;">{{ average_discharge }}</td>
     </tr>
     <tr class="middle">
         <td colspan="2">Countries</td>
         <td style="text-align:center;">{{ country_count }}</td>
+    </tr>
+    <tr class="middle">
+        <td colspan="2">Drainage Basin (km<sup>2</sup>)</td>
+        <td style="text-align:center;">{{ drainage_area }}</td>
     </tr>
     </tbody>
 </table>
