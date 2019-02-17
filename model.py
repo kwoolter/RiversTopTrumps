@@ -1,5 +1,6 @@
 import csv
 import logging
+import os
 
 class River():
     def __init__(self, name : str, continent : str, outflow : str = None, image_url : str = None):
@@ -44,9 +45,10 @@ class RiverFactory():
 
     def load(self):
         print("\nLoading rivers...")
+        filename= os.path.join(os.path.dirname(__file__),"data", "rivers.csv")
 
         # Attempt to open the file
-        with open(".\\data\\rivers.csv", 'r') as object_file:
+        with open(filename, 'r') as object_file:
 
             # Load all rows in as a dictionary
             reader = csv.DictReader(object_file)
